@@ -44,4 +44,8 @@ router.get("/results/:id", async (req, res) => {
 
 });
 
+router.get('/heart_beat',async(req,res)=>{
+    res.status(200).send(successResponse("Roger that !"))
+})
+
 export const coreRoutes = router;
