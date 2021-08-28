@@ -14,7 +14,7 @@ router.post("/submit", async (req, res) => {
             'folder': randomBytes(10).toString('hex')
         }
         await sendMessage(data);
-        res.status(202).send(successResponse(`http://localhost:7000/results/${data.folder}`));
+        res.status(202).send(successResponse(`https://rec-server-1.onrender.com/results/${data.folder}`));
     } catch (error) {
         console.log(error);
         res.status(500).send(errorResponse(500, "System error"));
