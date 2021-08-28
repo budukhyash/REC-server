@@ -48,4 +48,8 @@ router.get('/heart_beat',async(req,res)=>{
     res.status(200).send(successResponse("Roger that !"))
 })
 
+router.get('/loaderio-2ddd766fa9a27b515adb7a2459107dd3',async(req,res)=>{
+    res.send('loaderio-2ddd766fa9a27b515adb7a2459107dd3')
+})
+
 export const coreRoutes = router;
