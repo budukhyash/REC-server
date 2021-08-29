@@ -13,6 +13,7 @@ router.post("/submit", async (req, res) => {
             'timeOut': req.body.timeout,
             'folder': randomBytes(10).toString('hex')
         }
+        console.log(data)
         await sendMessage(data);
         res.status(202).send(successResponse(`https://rec-server-1.onrender.com/results/${data.folder}`));
     } catch (error) {
