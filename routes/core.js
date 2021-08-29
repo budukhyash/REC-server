@@ -49,8 +49,8 @@ router.get('/heart_beat',async(req,res)=>{
     res.status(200).send(successResponse("Roger that !"))
 })
 
-router.get('/loaderio-2ddd766fa9a27b515adb7a2459107dd3',async(req,res)=>{
-    res.send('loaderio-2ddd766fa9a27b515adb7a2459107dd3')
+router.get('/loaderio-49bd382af592331e780c13f4da135f33',async(req,res)=>{
+    res.send('loaderio-49bd382af592331e780c13f4da135f33')
 })
 
 export const coreRoutes = router;
