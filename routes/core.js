@@ -6,6 +6,12 @@ const router = express.Router();
 
 router.post("/submit", async (req, res) => {
     try {
+        var host = req.headers.host;
+        var origin = req.headers.origin;
+
+        console.log(host);
+        console.log(origin);
+
         let data = {
             'src': req.body.src,
             'input': req.body.stdin,
@@ -15,7 +21,7 @@ router.post("/submit", async (req, res) => {
         }
         console.log(data)
         await sendMessage(data);
-        res.status(202).send(successResponse(`https://rec-server-1.onrender.com/results/${data.folder}`));
+        res.status(202).send(successResponse(`https://rec-server.onrender.com/results/${data.folder}`));
     } catch (error) {
         console.log(error);
         res.status(500).send(errorResponse(500, "System error"));
